@@ -5,9 +5,22 @@ import Listitem from '../ListItem'
 
 class List extends React.Component {
   render() {
+    const { notes, activeId } = this.props;
+
     return(
       <div className="list">
-        <Listitem />
+        {notes.map((item) => {
+          const { id, title, contents } = item;
+          return (
+            <Listitem
+              key = {id}
+              id = {id}
+              active = {id === activeId}
+              title = {title}
+              contents = {contents}
+            />
+          );
+        })}
       </div>
     );
   }

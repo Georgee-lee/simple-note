@@ -4,10 +4,12 @@ import './index.css';
 
 class Listitem extends React.Component {
   render() {
+    const { id, active, title, contents } = this.props;
+
     return(
-      <div className="list-item">
-        <div className="title">제목</div>
-        <div className="list-item-contents">내용</div>
+      <div className = {active ? "list-item active" : "list-item"}>
+        <div className = "title">{title ? title : '제목'}</div>
+        <div className = "list-item-contents">{contents ? contents : '내용'}</div>
       </div>
     );
   }
