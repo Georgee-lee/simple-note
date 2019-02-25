@@ -1,3 +1,6 @@
+### Todo말고 간단한 노트앱 만들어 보기!
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -11,6 +14,3 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
-
-
-### Alex 선생님의 노트앱 클론코딩 하기!
