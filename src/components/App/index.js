@@ -28,8 +28,18 @@ class App extends React.Component {
     activeId: null,
   }
 
+  handleListItemClick = (id) => {
+    this.setState({
+      activeId: id,
+    })
+  }
+
   render() {
     const { notes, activeId } = this.state;
+
+    //  현재 활성화 된 객체를 찾기
+    const activeNote = notes.filter((item) => item.id === activeId)[0];
+
     return(
       <div className="app">
         <Header />
@@ -37,8 +47,11 @@ class App extends React.Component {
           <List
             notes= {notes}
             activeId = {activeId}
+            onListItemClick = {this.handleListItemClick}
           />
-          <Note />
+          {
+            notes.length > 0 && activeNote && <Note note = {activeNote} /> 
+          }
         </div>
       </div>
     );

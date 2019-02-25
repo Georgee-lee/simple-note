@@ -5,7 +5,7 @@ import Listitem from '../ListItem'
 
 class List extends React.Component {
   render() {
-    const { notes, activeId } = this.props;
+    const { notes, activeId, onListItemClick } = this.props;
 
     return(
       <div className="list">
@@ -18,6 +18,7 @@ class List extends React.Component {
               active = {id === activeId}
               title = {title}
               contents = {contents}
+              onClick = {() => onListItemClick(id)}
             />
           );
         })}
